@@ -1,0 +1,10 @@
+
+div.sivu {
+    padding-left: 210px;
+    text-align: center;
+    font-size: 1rem;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu {
+    background-color: #3344ff;
+    color:#ffffff;
+}
