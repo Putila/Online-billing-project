@@ -1,0 +1,68 @@
+'ABB Jussi uppo kytkin';'kpl';19.90
+'ABB Jussi uppo' pistorasia 2-osainen';'kpl';12.90
+'ABB Jussi uppo puhelinpistorasia keskiölevyllä';'kpl';6.99
+'ABB Jussi valosäädin 400W';'kpl';37.90
+'ABB Jussi vikavirtasuojapistorasia IP21';'kpl';119.00
+'Liitosjohto 3x1 1,5m';'kpl';4.99
+'Läpivientiporanterä';'kpl';11.90
+'Pistotulppajohto 3,5m';'kpl';1.99
+'Ripustusjohto E37 1m';'kpl';4.99
+'Digitaalinen termostaatti';'kpl';54.90
+'Asennuskanava 10 x 16 x 2000mm';'kpl';2.99
+'Kiuas-/liesikaapeli';'kpl';9.99
+'Pikaliitin 8-napainen';'kpl';0.798
+'Valaisinpistotulppa 15cm';'kpl';1.99
+'Vipuliitin 5-osainen';'kpl';4.99
+'ABB jakorasia pinnallinen pyöreä IP44';'kpl';9.99
+'ABB Jussi keskiölevy';'kpl';3.99
+'ABB Jussi peitelevy 3-osainen';'kpl';6.99
+'ABB Jussi uppo pistorasia 1 -osainen IP21';'kpl';10.99
+'ABB Kosti pinta 5 -kytkin IP44';'kpl';21.90
+'ABB Kosti pinta 6 -kytkin IP44';'kpl';19.90
+'ABB Jussi uppo pistorasia 2 -osainen IP21';'kpl';19.90
+'MCMK maakaapeli kieppi 2x1,5+1';'m';1.396
+'Ajastin 24 h ulkokäyttöön punainen';'kpl';4.99
+'Taivutusjousi 16 mm';'kpl';7.99
+'Mekaaninen termostaatti';'kpl';39.90
+'Friulsider kaapelipidike/letkupidike 10 mm';'kpl';0.199333333
+'Friulsider kaapelipidike/letkupidike 28 mm';'kpl';0.498333333
+'Tekstiilipäällysteinen lampunjohto E27 kannalla';'kpl';9.99
+'Tekstiilipäällysteinen lampunjohto E27 kannalla';'kpl';9.99
+'Automaattisulake 1-napainen hidas 10A';'2 kpl';6.99
+'Automaattisulake 1-napainen hidas 16A';'2 kpl';6.99
+'Automaattisulake 1-napainen hidas 25A';'2 kpl';6.99
+'Haaroitin roisketiivis 2-osainen maadoitettu IP44';'kpl';6.99
+'Kiuas/liesi asennuspaketti';'kpl';24.90
+'Legrand Pistotulppa irroitusrenkaalla';'kpl';2.99
+'Kytkin pinta 1/6';'3 kpl';9.99
+'Legrand haaroitin 3 x Schuko';'kpl';6.99
+'Legrand haaroitin 3 x Schuko vaakamalli';'kpl';6.99
+'Sidontaspiraali 7,5-60mm musta';'10 m';3.99
+'Sähkökaapelin vetojousi 3,2mm';'30 m';19.90
+'Legrand Pistotulppa Irroitusmekanismilla';'kpl';4.89
+'MMJ 3x2,5mm² Kaapeli kieppi';'50 m';64.90
+'Tarrakoukku kaapeleille/nippusiteille';'30 kpl';2.99
+'Tarrakoukku kaapeleille/nippusiteille 3-reik';'20 kpl';2.99
+'MMJ 3 x 1,5 mm² Kaapeli kieppi';'50 m';39.90
+'ABB kojerasia irtonysärasia AU3.2';'kpl';1.99
+'Automaattisulake 16A 380V';'kpl';8.99
+'Huppuliitin 5x1,5/3x2,5mm2';'25 kpl';4.99
+'Pikaliitin 5-napainen';'5 kpl';1.99
+'Pistotulppa sivuasennus maadoitettu';'kpl';1.99
+'Yleissulake 10A 500V';'kpl';1.99
+'Yleissulake 16A 500V';'5kpl';1.99
+'Antennipistorasian kahtiajako "Naaras"';'kpl';0.75
+
+
+
+
+
+
+
+
+
+
+
+
+
+

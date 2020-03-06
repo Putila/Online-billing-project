@@ -1,0 +1,139 @@
+CREATE SCHEMA SahkoFirma;
+SET SEARCH_PATH TO SahkoFirma;
+
+CREATE TABLE Asiakkaat (
+Asiakas_id INT,
+Kotikunta VARCHAR(30),
+Nimi VARCHAR(100) NOT NULL,
+Osoite VARCHAR(60),
+Kotitalousvah DECIMAL,
+PRIMARY KEY (Asiakas_id)
+);
+
+CREATE TABLE Kohteet (
+Kohde_id INT,
+Osoite VARCHAR(60),
+Nimi VARCHAR(50) NOT NULL,
+Omistaja INT NOT NULL,
+PRIMARY KEY (Kohde_id),
+FOREIGN KEY (Omistaja) REFERENCES Asiakkaat
+);
+
+CREATE TABLE TyoSuoritukset(
+Tyo_id INT,
+Kuvaus VARCHAR(50),
+Erat INT,
+Tyomuoto VARCHAR(10),
+PRIMARY KEY (Tyo_id),
+CHECK((Tyomuoto = 'Tuntityö' AND Erat IS NULL) 
+OR (Tyomuoto = 'Urakka' AND Erat IS NOT NULL))
+);
+
+CREATE TABLE Tehtiin (
+Kohde_id INT,
+Tyo_id INT,
+PRIMARY KEY (Kohde_id,Tyo_id),
+FOREIGN KEY (Kohde_id) REFERENCES Kohteet,
+FOREIGN KEY (Tyo_id) REFERENCES TyoSuoritukset
+);
+
+CREATE TABLE Laskut (
+Lasku_id INT,
+LoppuSumma DECIMAL,
+Tila BOOLEAN NOT NULL,
+EraPv DATE,
+MaksuPv DATE,
+LahetysPv DATE,
+KarhuLasku INT,
+MuistutusLasku INT UNIQUE,
+LaskuNmr INT,
+Tyo_id INT,
+PRIMARY KEY (Lasku_id),
+FOREIGN KEY (Tyo_id) REFERENCES TyoSuoritukset,
+FOREIGN KEY (MuistutusLasku) REFERENCES Laskut,
+FOREIGN KEY (KarhuLasku) REFERENCES Laskut(MuistutusLasku)
+);
+
+CREATE TABLE Tarvikkeet (
+Tarvike_id INT,
+Nimi VARCHAR(60) NOT NULL,
+Ostohinta DECIMAL,
+Myyntihinta DECIMAL,
+Varastotilanne DECIMAL,
+Yksikko VARCHAR (10) NOT NULL,
+PRIMARY KEY (Tarvike_id)
+);
+
+CREATE TABLE Kaytettiin(
+Tarvike_id INT,
+Tyo_id INT,
+Maara DECIMAL,
+Alennus INT,
+PRIMARY KEY (Tarvike_id,Tyo_id),
+FOREIGN KEY (Tarvike_id) REFERENCES Tarvikkeet,
+FOREIGN KEY (Tyo_id) REFERENCES TyoSuoritukset
+);
+
+CREATE TABLE Historia (
+Historia_id INT,
+Tarvike_id INT,
+Nimi VARCHAR(40) NOT NULL,
+Ostohinta DECIMAL,
+Myyntihinta DECIMAL,
+VanhenemisPv DATE,
+PRIMARY KEY (Historia_id),
+FOREIGN KEY (Tarvike_id) REFERENCES Tarvikkeet
+);
+
+CREATE TABLE Tunnit (
+Tyo_id INT,
+Suunnittelu_tunnit INT,
+Tyo_tunnit INT,
+Aputyo_tunnit INT,
+PRIMARY KEY (Tyo_id),
+FOREIGN KEY (Tyo_id) REFERENCES TyoSuoritukset
+);
+
+CREATE TABLE TyoHinnasto(
+Hinta DECIMAL,
+Tyyppi VARCHAR(15),
+PRIMARY KEY (Tyyppi)
+);
+
+CREATE TABLE Maksaa(
+Tyo_id INT,
+Tyyppi VARCHAR(15),
+Alennus INT,
+PRIMARY KEY (Tyyppi,Tyo_id),
+FOREIGN KEY (Tyyppi) REFERENCES TyoHinnasto,
+FOREIGN KEY (Tyo_id) REFERENCES TyoSuoritukset
+);
+
+INSERT INTO TyoHinnasto (Hinta,tyyppi)
+VALUES (55,'suunnittelu');
+INSERT INTO TyoHinnasto (Hinta,tyyppi)
+VALUES (45,'tyo');
+INSERT INTO TyoHinnasto (Hinta,tyyppi)
+VALUES (35,'aputyo');
+
+INSERT INTO tarvikkeet (tarvike_id, nimi, ostohinta, myyntihinta, varastotilanne, yksikko) VALUES (1, 'ABB Jussi uppo kytkin', 19.9, 23.88, 100, 'kpl');
+INSERT INTO tarvikkeet VALUES(2, 'ABB Jussi uppo pistorasia 2-osainen', 12.9, 15.48, 20, 'kpl');
+INSERT INTO tarvikkeet VALUES(3, 'ABB Jussi vikavirtasuojapistorasia IP21', 119, 142.8, 30, 'kpl');
+INSERT INTO tarvikkeet VALUES(4, 'Liitosjohto 3x1 1,5m', 4.99, 5.988, 30, 'kpl');
+INSERT INTO tarvikkeet VALUES(5, 'Pistotulppajohto 3,5m', 1.99, 2.388, 20, 'kpl');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
